@@ -1,12 +1,10 @@
-let chave = "ae284e07f6be9d5bbe190595f55793fe";
-
+let chave ="aaf4798cd23638c7ac9ad539016d8648";
 
 function clique(){
-   
     let cidade = document.querySelector(".input-cidade").value
     buscarCidade(cidade);
 
-   if(!cidade){
+    if(!cidade){
         alert("Inserir o nome da cidade")
 
     } else{
@@ -14,45 +12,28 @@ function clique(){
     }
 }
 
-//https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
-
-
-
 async function buscarCidade(cidade){
     let dados = await fetch(
-        "https://api.openweathermap.org/data/2.5/weather?q="+
-        cidade+
-        "&appid="+
+        "https://api.openweathermap.org/data/2.5/weather?q=" +
+        cidade +
+        "&appid=" +
         chave +
-        "&lang=pt_br" +
+        "&lang=pt_br" +  
         "&units=metric")
-        .then(res => res.json ())
-   
-    colocaNaTela(dados);
+        .then(res => res.json())
 
-   console.log(dados);
-   console.log(dados.main.temp)
+    colocanaTela(dados); 
+
+    console.log(dados);
+    console.log(dados.main.temp)
 }
 
-function colocaNaTela(dados){
+function colocanaTela(dados){
     document.querySelector(".nome-cidade").innerHTML = dados.name;
-    document.querySelector(".temp").innerHTML = (dados.main.temp) +"°C";
-    document.querySelector(".descrição").innerHTML = dados.weather[0].description;
-    document.querySelector(".umidade").innerHTML = dados.main.humidity +"%";
-     document.querySelector(".img").src = "https://openweathermap.org/img/wn" + dados.weather[0].icon + ".png";
-
+    document.querySelector(".temp").innerHTML = (dados.main.temp) + " °C";
+    document.querySelector(".descricao").innerHTML = "Descrição: " + dados.weather[0].description;
+    document.querySelector(".umidade").innerHTML = "Umidade: " + dados.main.humidity + "%";
+    document.querySelector("#icon").src = "https://openweathermap.org/img/wn/" + dados.weather[0].icon + ".png";
 }
-
-
-
-
-
-
-    
-
-
-
-
-
 
 
