@@ -74,7 +74,7 @@ box-sizing: border-box;
     margin-bottom: 2rem;
 
 }
-.Cidade, .temp, .descrição, .umidade{ 
+.Cidade, .temp, .descricao, .umidade{ 
     font-size: 2rem;
 
 
@@ -88,4 +88,5 @@ box-sizing: border-box;
 
 .icon{
     width: 9rem;
+
 }
