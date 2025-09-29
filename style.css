@@ -1,0 +1,91 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+
+}
+
+.principal{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: aliceblue;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+
+}
+
+.caixa-maior{
+    background-color: crimson;
+    width: 95%;
+    max-width: 720px;
+    opacity: 0.8;
+    padding: 1.25rem;
+    border-radius: 1.563rem;
+}
+
+.titulo{
+    text-transform: uppercase; 
+    opacity: 0.8;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 25px;
+    margin-top: 2rem;
+}
+
+.input-cidade ,.pesquisar{
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    background-color: white;
+    width: calc(100% - 100px);
+}
+
+.pesquisar{
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    background-color:violet;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.pesquisar:hover{
+    background-color: aqua;
+}
+
+.pesquisar:active{
+
+    background-color:violet;
+    color: white;
+    opacity: 0.6;
+}
+
+.caixa-menor{
+   
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+
+}
+.Cidade, .temp, .descrição, .umidade{ 
+    font-size: 2rem;
+
+
+}
+.img{
+    width: 4rem;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+    
+}
+
+.icon{
+    width: 9rem;
+}
